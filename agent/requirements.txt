@@ -17,7 +17,7 @@ langchain-openai==1.7.2
 structlog==26.1.0
 
 # --- Session-state durability (app/store.py) ---
-SQLAlchemy==2.1.5
+SQLAlchemy==2.1.6
 psycopg[binary]==3.3.6
 
 # --- Security-relevant transitive pins (older releases have known vulnerabilities) ---
