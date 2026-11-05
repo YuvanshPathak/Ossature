@@ -44,3 +44,6 @@ projectinfo.md
 # Output of scripts/two_instance_check.py
 .topology-*.log
 sbom/
+
+# Local-only notes (test credentials etc.)
+*.local.md
