@@ -1,7 +1,6 @@
 package com.ossature.interviewer.security;
 
 import com.ossature.interviewer.config.AppProperties;
-import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import java.nio.charset.StandardCharsets;
