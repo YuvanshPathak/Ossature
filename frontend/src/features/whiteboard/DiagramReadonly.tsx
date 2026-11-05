@@ -4,6 +4,7 @@ import 'reactflow/dist/style.css';
 import type { Diagram } from '../../types/protocol';
 import { ShapeNode, type ShapeKind, type ShapeNodeData } from './nodes/ShapeNode';
 import { LabeledEdge, type LabeledEdgeData } from './edges/LabeledEdge';
+import { EDGE_ARROW } from './edges/edgeMarker';
 
 const nodeTypes = { shape: ShapeNode };
 const edgeTypes = { labeled: LabeledEdge };
@@ -35,6 +36,7 @@ export function DiagramReadonly({ diagram }: { diagram: Diagram }) {
         target: e.target,
         label: e.label ?? '',
         type: 'labeled',
+        markerEnd: EDGE_ARROW,
         data: { locked: true, onRename: noop },
       })),
     [diagram.edges],

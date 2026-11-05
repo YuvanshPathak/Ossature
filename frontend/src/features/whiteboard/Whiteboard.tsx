@@ -16,6 +16,7 @@ import 'reactflow/dist/style.css';
 import { useWhiteboardStore } from './whiteboardStore';
 import { ShapeNode, type ShapeKind, type ShapeNodeData } from './nodes/ShapeNode';
 import { LabeledEdge, type LabeledEdgeData } from './edges/LabeledEdge';
+import { EDGE_ARROW } from './edges/edgeMarker';
 
 const nodeTypes = { shape: ShapeNode };
 const edgeTypes = { labeled: LabeledEdge };
@@ -67,6 +68,7 @@ function WhiteboardInner() {
       edges.map((e) => ({
         ...e,
         type: 'labeled',
+        markerEnd: EDGE_ARROW,
         data: { locked, onRename: (label: string) => renameEdge(e.id, label) },
       })),
     [edges, locked, renameEdge],
